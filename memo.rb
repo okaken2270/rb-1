@@ -48,12 +48,12 @@ puts "保存したので終了致します。"
  
  begin
 
- puts"指定したファイルの編集を開始します。"
+ puts"指定したファイルの編集を開始します。Ctrl+Dで保存します。"
 
  
  file = File.open("#{file_name}.csv", "a")
  
- imput_memo = gets.chomp
+ imput_memo = STDIN.read
  memo = imput_memo.chomp
  
  file.write("#{memo}")
